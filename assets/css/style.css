@@ -279,6 +279,8 @@ a{color:inherit;text-decoration:none}
   margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);
   font-size:12.5px;color:#8fa1c0;
 }
+.footer-parent{color:#c7d1e6;text-decoration:underline;text-underline-offset:2px;transition:.15s}
+.footer-parent:hover{color:var(--saffron)}
 
 /* ---------- Sticky order bar ---------- */
 .order-bar{
