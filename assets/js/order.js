@@ -430,6 +430,14 @@ function submit(e){
   const url = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(buildMessage());
   status.className = "form-status ok";
   status.textContent = "WhatsApp খোলা হচ্ছে… সেখানে পাঠিয়ে অর্ডার নিশ্চিত করুন।";
+  if (typeof gtag === "function"){
+    gtag("event", "place_order", {
+      value: t.total,
+      currency: "BDT",
+      items: t.count,
+      group: GROUPS[state.group].name
+    });
+  }
   window.open(url, "_blank", "noopener");
 }
 
